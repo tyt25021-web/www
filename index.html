@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+    <source src="Blackbeans.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">▶ เล่นเพลง</button>
+
+<div class="background"></div>
+
+<div class="card">
+    <div class="avatar">
+        <img src="gojo.jpg" alt="โปรไฟล์ที่โครตเฟี้ยว">
+    </div>
+
+    <h1>Yuki</h1>
+
+    <div class="text">
+        หวัดดีไม่ทราบว่าข้าเท่หรือไม่ ถือเป็นก้าวแรกที่ดี
+        วะฮ่าๆ
+        
+        
+        
+    </div>
+
+    <div class="social">
+        <a class="fb" href="https://www.facebook.com/kanokporn.kaisit.2025">Facebook</a>
+        <a class="ig" href="https://www.instagram.com/tomoe__09/">Instagram</a>
+    </div>
+</div>
+
+<script>
+const music = document.getElementById("music");
+const btn = document.getElementById("musicBtn");
+
+btn.onclick = () => {
+    if (music.paused) {
+        music.play();
+        btn.textContent = "⏸ หยุดเพลง";
+    } else {
+        music.pause();
+        btn.textContent = "▶ เล่นเพลง";
+    }
+};
+</script>
+
+</body>
+</html>
